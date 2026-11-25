@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 幹 La app: lee el código con Roslyn, lo dibuja como planta y verifica las reglas compilándolas. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>arbol</AssemblyName>
+    <RootNamespace>Arbol.App</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" />
+    <InternalsVisibleTo Include="Arbol.Pruebas" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Tienda.Dominio/Tienda.Dominio.csproj" />
+  </ItemGroup>
+</Project>

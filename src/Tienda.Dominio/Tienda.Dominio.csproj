@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 幹 El espécimen: una tienda pequeña escrita para que cada nivel del árbol de C# aparezca al menos una vez. -->
+  <PropertyGroup>
+    <RootNamespace>Tienda.Dominio</RootNamespace>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Arbol.Pruebas" />
+  </ItemGroup>
+</Project>

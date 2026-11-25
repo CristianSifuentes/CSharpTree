@@ -1,0 +1,315 @@
+
+   樹形   el árbol de C#
+   de la solución a la expresión · leído con Roslyn · C# 14 · .NET 10
+   ──────────────────────────────────────────────●
+
+
+  数  Censo de la planta · cuántos nodos hay en cada nivel
+
+  根  solución   raíz         1  •
+  幹  proyecto   tronco       3  •
+  枝  archivo    rama        23  •
+  茎  namespace  tallo       66  •
+  芽  tipo       brote       44  •
+  葉  miembro    hoja       239  ••••
+  花  sentencia  flor       553  ••••••••
+  種  expresión  semilla   2988  ••••••••••••••••••••••••••••••••••••••••
+
+  芽  El árbol de ArbolCSharp.slnx, hasta tipo (brote)
+
+  根 ArbolCSharp.slnx  solo agrupa: el compilador nunca la ve
+  ├─ 幹 Tienda.Dominio.csproj  → Tienda.Dominio.dll
+  │  ├─ 枝 Catalogo/Bloques.cs
+  │  │  ├─ 茎 namespace Tienda.Dominio.Inventario  de bloque { }
+  │  │  │  ├─ 茎 using Tienda.Dominio.Catalogo
+  │  │  │  ├─ 芽 class Almacen  public sealed
+  │  │  │  └─ 茎 namespace Auditoria  de bloque { }
+  │  │  │     └─ 芽 class Bitacora  internal static
+  │  │  └─ 茎 namespace Tienda.Dominio.Envios  de bloque { }
+  │  │     └─ 芽 class Tarifas  public static
+  │  ├─ 枝 Catalogo/Folios.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Catalogo  file-scoped [C# 10]
+  │  │     ├─ 芽 class Folios  public static
+  │  │     └─ 芽 class Generador  file static [C# 11]
+  │  ├─ 枝 Catalogo/Tipos.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Catalogo  file-scoped [C# 10]
+  │  │     ├─ 芽 enum Categoria  public · valor
+  │  │     ├─ 芽 delegate Descuento  firma de método · sin miembros
+  │  │     ├─ 芽 interface IIdentificable<TSelf>  public
+  │  │     ├─ 芽 class Producto  public sealed
+  │  │     ├─ 芽 struct Coordenada  public readonly [C# 12]
+  │  │     ├─ 芽 struct Contador  public ref
+  │  │     ├─ 芽 class Envio  public abstract
+  │  │     ├─ 芽 class EnvioTerrestre  public
+  │  │     ├─ 芽 class EnvioExpres  public sealed
+  │  │     └─ 芽 class Recibo  public sealed
+  │  ├─ 枝 Ensamblado.cs
+  │  │  ├─ 茎 global using Tienda.Dominio.Pedidos  para todo el proyecto [C# 10]
+  │  │  ├─ 茎 global using System.Collections.Immutable  para todo el proyecto [C# 10]
+  │  │  ├─ 茎 using System.Reflection
+  │  │  ├─ 茎 using System.Runtime.CompilerServices
+  │  │  ├─ 茎 [assembly: AssemblyDescription]  atributo de ensamblado
+  │  │  └─ 茎 [assembly: InternalsVisibleTo]  atributo de ensamblado
+  │  ├─ 枝 Extensiones/PedidoExtensiones.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Extensiones  file-scoped [C# 10]
+  │  │     ├─ 茎 using Tienda.Dominio.Catalogo
+  │  │     └─ 芽 class PedidoExtensiones  public static
+  │  ├─ 枝 Pedidos/Linea.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
+  │  │     ├─ 芽 record Linea  public sealed [C# 9]
+  │  │     └─ 芽 record struct Dinero  public readonly [C# 10]
+  │  ├─ 枝 Pedidos/Pedido.Partes.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
+  │  │     └─ 芽 class Pedido  public sealed partial
+  │  ├─ 枝 Pedidos/Pedido.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
+  │  │     └─ 芽 class Pedido  public sealed partial
+  │  │        └─ 芽 enum Fase  public · valor · anidado ↺ vuelve a 芽
+  │  └─ 枝 Sentencias/Caja.cs
+  │     └─ 茎 namespace Tienda.Dominio.Sentencias  file-scoped [C# 10]
+  │        ├─ 茎 using Tienda.Dominio.Catalogo
+  │        ├─ 茎 using Tienda.Dominio.Extensiones
+  │        └─ 芽 class Caja  public sealed
+  │           ├─ 芽 delegate Lector  firma de método · sin miembros · anidado ↺ vuelve a 芽
+  │           └─ 芽 class Registro  private sealed · anidado ↺ vuelve a 芽 [C# 12]
+  ├─ 幹 Arbol.App.csproj  → arbol.exe
+  │  ├─ 枝 Comandos.cs
+  │  │  ├─ 茎 using System.Text
+  │  │  ├─ 茎 using Arbol.App.Dibujo
+  │  │  ├─ 茎 using Arbol.App.Raices
+  │  │  ├─ 茎 using Arbol.App.Verificacion
+  │  │  └─ 茎 namespace Arbol.App  file-scoped [C# 10]
+  │  │     └─ 芽 class Comandos  internal static
+  │  ├─ 枝 Dibujo/Herbario.cs
+  │  │  ├─ 茎 using System.Globalization
+  │  │  ├─ 茎 using System.Net
+  │  │  ├─ 茎 using System.Text
+  │  │  ├─ 茎 using Arbol.App.Raices
+  │  │  └─ 茎 namespace Arbol.App.Dibujo  file-scoped [C# 10]
+  │  │     └─ 芽 class Herbario  public static
+  │  ├─ 枝 Dibujo/Terminal.cs
+  │  │  ├─ 茎 using System.Text
+  │  │  ├─ 茎 using Arbol.App.Raices
+  │  │  └─ 茎 namespace Arbol.App.Dibujo  file-scoped [C# 10]
+  │  │     └─ 芽 class Terminal  public sealed [C# 12]
+  │  ├─ 枝 Program.cs
+  │  │  ├─ 茎 using System.Text
+  │  │  ├─ 茎 using Arbol.App
+  │  │  ├─ 茎 using Arbol.App.Dibujo
+  │  │  ├─ 茎 using Arbol.App.Raices
+  │  │  └─ 茎 top-level statements  solo un archivo por proyecto [C# 9]
+  │  ├─ 枝 Raices/LectorDeArbol.cs
+  │  │  ├─ 茎 using System.Diagnostics
+  │  │  ├─ 茎 using System.Xml.Linq
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis.CSharp
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis.CSharp.Syntax
+  │  │  └─ 茎 namespace Arbol.App.Raices  file-scoped [C# 10]
+  │  │     └─ 芽 class LectorDeArbol  public static
+  │  ├─ 枝 Raices/Nivel.cs
+  │  │  └─ 茎 namespace Arbol.App.Raices  file-scoped [C# 10]
+  │  │     ├─ 芽 enum Nivel  public · valor
+  │  │     └─ 芽 class NivelExtensiones  public static
+  │  ├─ 枝 Raices/Nodo.cs
+  │  │  └─ 茎 namespace Arbol.App.Raices  file-scoped [C# 10]
+  │  │     └─ 芽 class Nodo  public sealed [C# 12]
+  │  ├─ 枝 Verificacion/Afirmaciones.cs
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis.CSharp
+  │  │  └─ 茎 namespace Arbol.App.Verificacion  file-scoped [C# 10]
+  │  │     ├─ 芽 record Afirmacion  public sealed [C# 9]
+  │  │     ├─ 芽 record Veredicto  public sealed [C# 9]
+  │  │     └─ 芽 class Afirmaciones  public static
+  │  ├─ 枝 Verificacion/Compilador.cs
+  │  │  ├─ 茎 using System.Collections.Immutable
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis
+  │  │  ├─ 茎 using Microsoft.CodeAnalysis.CSharp
+  │  │  └─ 茎 namespace Arbol.App.Verificacion  file-scoped [C# 10]
+  │  │     └─ 芽 class Compilador  public static
+  │  │        └─ 芽 record Resultado  public sealed · anidado ↺ vuelve a 芽 [C# 9]
+  │  ├─ 枝 Verificacion/Informe.cs
+  │  │  ├─ 茎 using System.Globalization
+  │  │  ├─ 茎 using System.Text
+  │  │  └─ 茎 namespace Arbol.App.Verificacion  file-scoped [C# 10]
+  │  │     └─ 芽 class Informe  public static
+  │  └─ 枝 Verificacion/Matriz.cs
+  │     └─ 茎 namespace Arbol.App.Verificacion  file-scoped [C# 10]
+  │        ├─ 芽 enum Celda  public · valor
+  │        ├─ 芽 record FilaMatriz  public sealed [C# 9]
+  │        ├─ 芽 record ResultadoCelda  public sealed [C# 9]
+  │        └─ 芽 class Matriz  public static
+  └─ 幹 Arbol.Pruebas.csproj  → Arbol.Pruebas.dll
+     ├─ 枝 AfirmacionesTests.cs
+     │  ├─ 茎 using Arbol.App.Verificacion
+     │  └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
+     │     └─ 芽 class AfirmacionesTests  public sealed
+     ├─ 枝 DominioTests.cs
+     │  ├─ 茎 using Tienda.Dominio.Catalogo
+     │  ├─ 茎 using Tienda.Dominio.Extensiones
+     │  ├─ 茎 using Tienda.Dominio.Pedidos
+     │  ├─ 茎 using Tienda.Dominio.Sentencias
+     │  └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
+     │     └─ 芽 class DominioTests  public sealed
+     └─ 枝 LectorTests.cs
+        ├─ 茎 using Arbol.App.Raices
+        └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
+           └─ 芽 class LectorTests  public sealed
+
+  種  El árbol de ArbolCSharp.slnx, hasta expresión (semilla)
+
+  根 ArbolCSharp.slnx  solo agrupa: el compilador nunca la ve
+  └─ 幹 Tienda.Dominio.csproj  → Tienda.Dominio.dll
+     └─ 枝 Pedidos/Pedido.Partes.cs
+        └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
+           └─ 芽 class Pedido  public sealed partial
+              ├─ 葉 campo _cambio
+              ├─ 葉 constructor Pedido(string cliente)  partial [C# 14]
+              │  ├─ 花 sentencia de expresión  Cliente = cliente;
+              │  │  └─ 種 asignación  Cliente = cliente
+              │  │     ├─ 種 nombre  Cliente
+              │  │     └─ 種 nombre  cliente
+              │  └─ 花 sentencia de expresión  Interlocked.Increment(ref s_creados);
+              │     └─ 種 llamada  Interlocked.Increment(ref s_creados)
+              │        └─ 種 acceso .  Interlocked.Increment
+              └─ 葉 evento Cambio  partial · add / remove [C# 14]
+                 ├─ 種 asignación  _cambio += value
+                 │  ├─ 種 nombre  _cambio
+                 │  └─ 種 nombre  value
+                 └─ 種 asignación  _cambio -= value
+                    ├─ 種 nombre  _cambio
+                    └─ 種 nombre  value
+
+  道  ¿Dónde vive «método Agregar()»? · 葉 miembro
+
+  根 ArbolCSharp.slnx
+    幹 Tienda.Dominio.csproj
+      枝 Pedidos/Pedido.cs
+        茎 namespace Tienda.Dominio.Pedidos
+          芽 class Pedido
+            葉 método Agregar()
+
+  mismo nivel (17 hermanos dentro de «class Pedido»):
+    葉 constante MaxLineas · campo s_creados · campo _lineas · propiedad Cliente
+      propiedad FaseActual · propiedad Nota · indexador this[int indice] · propiedad Cantidad
+      propiedad Total · propiedad Creados · constructor Pedido(string cliente) · evento Cambio
+      método Pagar() · operador + · operador += · método ToString()
+    芽 enum Fase
+
+  道  ¿Dónde vive «extension(Pedido pedido)»? · 葉 miembro
+
+  根 ArbolCSharp.slnx
+    幹 Tienda.Dominio.csproj
+      枝 Extensiones/PedidoExtensiones.cs
+        茎 namespace Tienda.Dominio.Extensiones
+          芽 class PedidoExtensiones
+            葉 extension(Pedido pedido)
+
+  mismo nivel (2 hermanos dentro de «class PedidoExtensiones»):
+    葉 extension(Pedido) · método Resumen()
+
+  証  Cada cosa en su rama · reglas de ubicación
+
+  ✓ U1    芽 Un tipo nunca va dentro de un método                     CS1513 CS1022
+  ✓ U1b   芽 Un tipo sí puede ir dentro de otro tipo (anidado)        compila
+  ✓ U2    葉 Un miembro suelto en un namespace es CS0116              CS0116
+  ✓ U2b   葉 Lo más parecido a un global: miembro static de clase static compila
+  ✓ U3    枝 Top-level en dos archivos es CS8802                      CS8802
+  ✓ U3b   枝 Top-level en un solo archivo compila                     compila
+  ✓ U3c   枝 Un using después de código es CS1529                     CS1529
+  ✓ U3d   枝 Top-level después de un namespace es CS8803              CS8803
+  ✓ U4    芽 Una interfaz no tiene campos de instancia: CS0525        CS0525
+  ✓ U4b   芽 …pero sí propiedades                                     compila
+  ✓ U5    葉 Extensión en clase genérica: CS1106                      CS1106
+  ✓ U5b   葉 Extensión en clase no static: CS1106                     CS1106
+  ✓ U5c   葉 Extensión en clase anidada: CS1109                       CS1109
+  ✓ U5d   葉 Bloque extension en clase static de primer nivel compila compila
+  ✓ U5e   葉 Bloque extension en clase genérica no compila            CS9283
+
+  証  Dos árboles que se cruzan · archivo y namespace
+
+  ✓ A1    茎 file-scoped y namespace de bloque no se mezclan          CS8955
+  ✓ A2    茎 Varios namespaces de bloque sí conviven                  compila
+  ✓ A3    茎 Un namespace no es una carpeta: se reparte en archivos   compila
+  ✓ A4    芽 partial reparte un tipo entre archivos                   compila
+
+  証  Una sola savia · herencia
+
+  ✓ H1    系 Una sola clase base: CS1721                              CS1721
+  ✓ H1b   系 Una base y muchas interfaces sí                          compila
+  ✓ H2    系 sealed no tiene herederos: CS0509                        CS0509
+  ✓ H3    系 struct solo implementa interfaces: CS0527                CS0527
+  ✓ H3b   系 struct con interfaces sí                                 compila
+  ✓ H4    系 Sin ciclos: CS0146                                       CS0146
+  ✓ H5    系 abstract no se instancia: CS0144                         CS0144
+  ✓ H6    系 override solo sobre virtual/abstract/override: CS0506    CS0506
+  ✓ H7    系 override con otra visibilidad: CS0507                    CS0507
+
+  証  Miembros, sentencias y expresiones
+
+  ✓ M1    葉 static class: miembro de instancia es CS0708             CS0708
+  ✓ M2    葉 static class: operador es CS0715                         CS0715 CS0721
+  ✓ M3    葉 struct no admite finalizador                             CS0575
+  ✓ M4    葉 interface no admite constructor de instancia             CS0526
+  ✓ M5    葉 interface sí admite constructor static                   compila
+  ✓ M6    葉 Los miembros son hermanos: el orden no importa           compila
+  ✓ S1    花 Un local con private no compila (es error de sintaxis)   CS1513 CS1022
+  ✓ S1b   花 Una función local con public no compila                  CS1513 CS1022
+  ✓ S1c   花 Un local con static tampoco                              CS0106
+  ✓ S2    花 Función local static no captura: CS8421                  CS8421
+  ✓ E1    種 Una sentencia suelta como expresión no vale: CS0201      CS0201
+
+  証  Brotes nuevos · compila con su versión y falla con la anterior
+
+  ✓ N9a   枝 C# 9 · top-level statements                              compila · antes: CS8400
+  ✓ N9b   芽 C# 9 · record                                            compila · antes: CS8805 CS8400 CS8112 CS0246
+  ✓ N9c   葉 C# 9 · init                                              compila · antes: CS8400
+  ✓ N10a  茎 C# 10 · file-scoped namespace                            compila · antes: CS8773
+  ✓ N10b  茎 C# 10 · global using                                     compila · antes: CS8773
+  ✓ N10c  芽 C# 10 · record struct                                    compila · antes: CS8773
+  ✓ N11a  芽 C# 11 · file class                                       compila · antes: CS8936
+  ✓ N11b  葉 C# 11 · required                                         compila · antes: CS8936
+  ✓ N11c  葉 C# 11 · static abstract en interfaces                    compila · antes: CS8703
+  ✓ N11d  種 C# 11 · patrones de lista                                compila · antes: CS8936
+  ✓ N11e  種 C# 11 · raw strings                                      compila · antes: CS8936
+  ✓ N12a  芽 C# 12 · constructor primario en class                    compila · antes: CS9058
+  ✓ N12b  種 C# 12 · expresiones de colección                         compila · antes: CS9058
+  ✓ N12c  枝 C# 12 · using alias de cualquier tipo                    compila · antes: CS9058
+  ✓ N13a  花 C# 13 · params con colecciones                           compila · antes: CS9202
+  ✓ N13b  葉 C# 13 · propiedades partial                              compila · antes: CS8703
+  ✓ N13c  芽 C# 13 · ref struct que implementa interfaces             compila · antes: CS9202
+  ✓ N14a  葉 C# 14 · field en propiedades                             compila · antes: CS9260 CS0103
+  ✓ N14b  葉 C# 14 · bloques extension                                compila · antes: CS1513 CS1022 CS9260 CS071…
+  ✓ N14c  葉 C# 14 · constructores partial                            compila · antes: CS0246 CS0501 CS0542 CS011…
+  ✓ N14d  葉 C# 14 · eventos partial                                  compila · antes: CS8703
+  ✓ N14e  葉 C# 14 · operadores += propios                            compila · antes: CS9260
+  ✓ N14f  花 C# 14 · lambdas con ref/out sin tipos                    compila · antes: CS9260
+  ✓ N14g  種 C# 14 · asignación con ?.                                compila · antes: CS9260
+  ✓ N14h  種 C# 14 · nameof(List<>)                                   compila · antes: CS9260
+
+  表  ¿Qué hoja crece en qué brote? · la matriz, compilada celda por celda
+
+                      class         struct        interface     enum          static class  
+  campo de instancia  ●             ●             —             —             —             
+  campo static        ●             ●             ●             —             ●             
+  constante           ●             ●             ●             ●             ●             
+  propiedad           ●             ●             ●             —             ○             
+  indexador           ●             ●             ●             —             —             
+  método              ●             ●             ●             —             ○             
+  constructor         ●             ●             ○             —             ○             
+  finalizador         ●             —             —             —             —             
+  evento              ●             ●             ●             —             ○             
+  operador            ●             ●             ●             —             —             
+  tipo anidado        ●             ●             ●             —             ●             
+  bloque extension    —             —             —             —             ●             
+
+  ● 124 de 124 afirmaciones confirmadas por el compilador.
+  informe: salida/verificacion.md
+
+  画  Lámina de herbario generada desde el código real
+
+  salida/herbario-dominio.svg  (147 nodos hasta miembro)
+
+  画  Lámina de herbario generada desde el código real
+
+  salida/herbario-solucion.svg  (137 nodos hasta tipo)
+

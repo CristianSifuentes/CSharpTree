@@ -1,0 +1,454 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1735" height="2536" viewBox="0 0 1735 2536">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Noto+Sans+JP:wght@900&amp;family=Geist+Mono:wght@400;500&amp;display=block');
+    .k { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; }
+    .i { font-family: 'Instrument Serif', serif; font-style: italic; }
+    .m { font-family: 'Geist Mono', 'JetBrains Mono', monospace; }
+    .e { paint-order: stroke; stroke: #ECE6DA; stroke-width: 5px; stroke-linejoin: round; }
+  </style>
+  <pattern id="puntos" width="36" height="36" patternUnits="userSpaceOnUse">
+    <circle cx="18" cy="18" r="1.3" fill="#D3CBBB"/>
+  </pattern>
+</defs>
+<rect width="100%" height="100%" fill="#ECE6DA"/>
+<rect width="100%" height="100%" fill="url(#puntos)"/>
+<text x="90" y="70" class="m" font-size="20" fill="#6E685E" letter-spacing="1.5">cristian / herbario</text>
+<text x="1645" y="70" class="m" font-size="20" fill="#6E685E" text-anchor="end">[ c# 14 ]</text>
+<text x="90" y="170" class="k" font-size="92" fill="#151515">樹<tspan fill="#E0312B">形</tspan></text>
+<text x="305" y="140" class="i" font-size="52" fill="#151515">El &#225;rbol de la soluci&#243;n</text>
+<text x="307" y="172" class="m" font-size="16" fill="#6E685E">leído con Roslyn · 84 hojas · 137 nodos · lo general a la izquierda</text>
+<line x1="90" y1="200" x2="1645" y2="200" stroke="#151515" stroke-width="2"/><circle cx="1645" cy="200" r="6" fill="#E0312B"/>
+<text x="78" y="258" class="k" font-size="30" fill="#E0312B">根</text>
+<text x="116" y="256" class="i" font-size="24" fill="#6E685E">solución</text>
+<line x1="90" y1="272" x2="90" y2="2346" stroke="#D3CBBB" stroke-width="1" stroke-dasharray="1 6"/>
+<text x="323" y="258" class="k" font-size="30" fill="#151515">幹</text>
+<text x="361" y="256" class="i" font-size="24" fill="#6E685E">proyecto</text>
+<line x1="335" y1="272" x2="335" y2="2346" stroke="#D3CBBB" stroke-width="1" stroke-dasharray="1 6"/>
+<text x="568" y="258" class="k" font-size="30" fill="#151515">枝</text>
+<text x="606" y="256" class="i" font-size="24" fill="#6E685E">archivo</text>
+<line x1="580" y1="272" x2="580" y2="2346" stroke="#D3CBBB" stroke-width="1" stroke-dasharray="1 6"/>
+<text x="813" y="258" class="k" font-size="30" fill="#151515">茎</text>
+<text x="851" y="256" class="i" font-size="24" fill="#6E685E">namespace</text>
+<line x1="825" y1="272" x2="825" y2="2346" stroke="#D3CBBB" stroke-width="1" stroke-dasharray="1 6"/>
+<text x="1058" y="258" class="k" font-size="30" fill="#151515">芽</text>
+<text x="1096" y="256" class="i" font-size="24" fill="#6E685E">tipo</text>
+<line x1="1070" y1="272" x2="1070" y2="2346" stroke="#D3CBBB" stroke-width="1" stroke-dasharray="1 6"/>
+<path d="M90,1435.5 C212.5,1435.5 212.5,675 335,675" fill="none" stroke="#151515" stroke-width="2.6"/>
+<path d="M335,675 C457.5,675 457.5,348 580,348" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,348 C702.5,348 702.5,324 825,324" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,324 C947.5,324 947.5,300 1070,300" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,324 C947.5,324 947.5,324 1070,324" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,324 C947.5,324 947.5,348 1070,348" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M1070,348 C1192.5,348 1192.5,348 1315,348" fill="none" stroke="#151515" stroke-width="1"/>
+<path d="M580,348 C702.5,348 702.5,372 825,372" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,372 C947.5,372 947.5,372 1070,372" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,408 580,408" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,408 C702.5,408 702.5,408 825,408" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,408 C947.5,408 947.5,396 1070,396" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,408 C947.5,408 947.5,420 1070,420" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,552 580,552" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,552 C702.5,552 702.5,552 825,552" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,552 C947.5,552 947.5,444 1070,444" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,468 1070,468" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,492 1070,492" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,516 1070,516" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,540 1070,540" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,564 1070,564" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,588 1070,588" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,612 1070,612" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,636 1070,636" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,552 C947.5,552 947.5,660 1070,660" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,744 580,744" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,744 C702.5,744 702.5,684 825,684" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,744 C702.5,744 702.5,708 825,708" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,744 C702.5,744 702.5,732 825,732" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,744 C702.5,744 702.5,756 825,756" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,744 C702.5,744 702.5,780 825,780" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,744 C702.5,744 702.5,804 825,804" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M335,675 C457.5,675 457.5,840 580,840" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,840 C702.5,840 702.5,840 825,840" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,840 C947.5,840 947.5,828 1070,828" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,840 C947.5,840 947.5,852 1070,852" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,888 580,888" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,888 C702.5,888 702.5,888 825,888" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,888 C947.5,888 947.5,876 1070,876" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,888 C947.5,888 947.5,900 1070,900" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,924 580,924" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,924 C702.5,924 702.5,924 825,924" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,924 C947.5,924 947.5,924 1070,924" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,675 C457.5,675 457.5,948 580,948" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,948 C702.5,948 702.5,948 825,948" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,948 C947.5,948 947.5,948 1070,948" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M1070,948 C1192.5,948 1192.5,948 1315,948" fill="none" stroke="#151515" stroke-width="1"/>
+<path d="M335,675 C457.5,675 457.5,1002 580,1002" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1002 C702.5,1002 702.5,1002 825,1002" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1002 C947.5,1002 947.5,972 1070,972" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,1002 C947.5,1002 947.5,996 1070,996" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,1002 C947.5,1002 947.5,1032 1070,1032" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M1070,1032 C1192.5,1032 1192.5,1020 1315,1020" fill="none" stroke="#151515" stroke-width="1"/>
+<path d="M1070,1032 C1192.5,1032 1192.5,1044 1315,1044" fill="none" stroke="#151515" stroke-width="1"/>
+<path d="M90,1435.5 C212.5,1435.5 212.5,1578 335,1578" fill="none" stroke="#151515" stroke-width="2.6"/>
+<path d="M335,1578 C457.5,1578 457.5,1116 580,1116" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1116 C702.5,1116 702.5,1068 825,1068" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1116 C702.5,1116 702.5,1092 825,1092" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1116 C702.5,1116 702.5,1116 825,1116" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1116 C702.5,1116 702.5,1140 825,1140" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1116 C702.5,1116 702.5,1164 825,1164" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1164 C947.5,1164 947.5,1164 1070,1164" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1236 580,1236" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1236 C702.5,1236 702.5,1188 825,1188" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1236 C702.5,1236 702.5,1212 825,1212" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1236 C702.5,1236 702.5,1236 825,1236" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1236 C702.5,1236 702.5,1260 825,1260" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1236 C702.5,1236 702.5,1284 825,1284" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1284 C947.5,1284 947.5,1284 1070,1284" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1332 580,1332" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1332 C702.5,1332 702.5,1308 825,1308" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1332 C702.5,1332 702.5,1332 825,1332" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1332 C702.5,1332 702.5,1356 825,1356" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1356 C947.5,1356 947.5,1356 1070,1356" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1428 580,1428" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1428 C702.5,1428 702.5,1380 825,1380" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1428 C702.5,1428 702.5,1404 825,1404" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1428 C702.5,1428 702.5,1428 825,1428" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1428 C702.5,1428 702.5,1452 825,1452" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1428 C702.5,1428 702.5,1476 825,1476" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M335,1578 C457.5,1578 457.5,1560 580,1560" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1560 C702.5,1560 702.5,1500 825,1500" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1560 C702.5,1560 702.5,1524 825,1524" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1560 C702.5,1560 702.5,1548 825,1548" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1560 C702.5,1560 702.5,1572 825,1572" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1560 C702.5,1560 702.5,1596 825,1596" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1560 C702.5,1560 702.5,1620 825,1620" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1620 C947.5,1620 947.5,1620 1070,1620" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1656 580,1656" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1656 C702.5,1656 702.5,1656 825,1656" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1656 C947.5,1656 947.5,1644 1070,1644" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,1656 C947.5,1656 947.5,1668 1070,1668" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1692 580,1692" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1692 C702.5,1692 702.5,1692 825,1692" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1692 C947.5,1692 947.5,1692 1070,1692" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1752 580,1752" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1752 C702.5,1752 702.5,1716 825,1716" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1752 C702.5,1752 702.5,1740 825,1740" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1752 C702.5,1752 702.5,1788 825,1788" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1788 C947.5,1788 947.5,1764 1070,1764" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,1788 C947.5,1788 947.5,1788 1070,1788" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,1788 C947.5,1788 947.5,1812 1070,1812" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,1872 580,1872" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1872 C702.5,1872 702.5,1836 825,1836" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1872 C702.5,1872 702.5,1860 825,1860" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1872 C702.5,1872 702.5,1884 825,1884" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1872 C702.5,1872 702.5,1908 825,1908" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1908 C947.5,1908 947.5,1908 1070,1908" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M1070,1908 C1192.5,1908 1192.5,1908 1315,1908" fill="none" stroke="#151515" stroke-width="1"/>
+<path d="M335,1578 C457.5,1578 457.5,1956 580,1956" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,1956 C702.5,1956 702.5,1932 825,1932" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1956 C702.5,1956 702.5,1956 825,1956" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,1956 C702.5,1956 702.5,1980 825,1980" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,1980 C947.5,1980 947.5,1980 1070,1980" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,1578 C457.5,1578 457.5,2040 580,2040" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,2040 C702.5,2040 702.5,2040 825,2040" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,2040 C947.5,2040 947.5,2004 1070,2004" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,2040 C947.5,2040 947.5,2028 1070,2028" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,2040 C947.5,2040 947.5,2052 1070,2052" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M825,2040 C947.5,2040 947.5,2076 1070,2076" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M90,1435.5 C212.5,1435.5 212.5,2196 335,2196" fill="none" stroke="#151515" stroke-width="2.6"/>
+<path d="M335,2196 C457.5,2196 457.5,2112 580,2112" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,2112 C702.5,2112 702.5,2100 825,2100" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2112 C702.5,2112 702.5,2124 825,2124" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,2124 C947.5,2124 947.5,2124 1070,2124" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,2196 C457.5,2196 457.5,2196 580,2196" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,2196 C702.5,2196 702.5,2148 825,2148" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2196 C702.5,2196 702.5,2172 825,2172" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2196 C702.5,2196 702.5,2196 825,2196" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2196 C702.5,2196 702.5,2220 825,2220" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2196 C702.5,2196 702.5,2244 825,2244" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,2244 C947.5,2244 947.5,2244 1070,2244" fill="none" stroke="#151515" stroke-width="1.4"/>
+<path d="M335,2196 C457.5,2196 457.5,2280 580,2280" fill="none" stroke="#151515" stroke-width="2.2"/>
+<path d="M580,2280 C702.5,2280 702.5,2268 825,2268" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M580,2280 C702.5,2280 702.5,2292 825,2292" fill="none" stroke="#151515" stroke-width="1.8"/>
+<path d="M825,2292 C947.5,2292 947.5,2292 1070,2292" fill="none" stroke="#151515" stroke-width="1.4"/>
+<circle cx="90" cy="1435.5" r="9" fill="#E0312B"/>
+<text x="99" y="1426.5" class="m e" font-size="13.5" font-weight="500" fill="#E0312B">ArbolCSharp.slnx</text>
+<circle cx="335" cy="675" r="8" fill="#151515"/>
+<text x="344" y="666" class="m e" font-size="13.5" font-weight="500" fill="#151515">Tienda.Dominio.csproj</text>
+<circle cx="580" cy="348" r="7" fill="#151515"/>
+<text x="589" y="339" class="m e" font-size="13.5" font-weight="500" fill="#151515">Catalogo/Bloques.cs</text>
+<circle cx="825" cy="324" r="6" fill="#151515"/>
+<text x="834" y="315" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.I…</text>
+<circle cx="1070" cy="300" r="3.6" fill="#151515"/>
+<text x="1080" y="304.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Catalogo</text>
+<circle cx="1070" cy="324" r="3.6" fill="#151515"/>
+<text x="1080" y="328.5" class="m e" font-size="13.5" fill="#151515">class Almacen</text>
+<circle cx="1070" cy="348" r="5" fill="#151515"/>
+<text x="1079" y="339" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Auditoria</text>
+<circle cx="1315" cy="348" r="3.6" fill="#151515"/>
+<text x="1325" y="352.5" class="m e" font-size="13.5" fill="#151515">class Bitacora</text>
+<circle cx="825" cy="372" r="6" fill="#151515"/>
+<text x="834" y="363" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.E…</text>
+<circle cx="1070" cy="372" r="3.6" fill="#151515"/>
+<text x="1080" y="376.5" class="m e" font-size="13.5" fill="#151515">class Tarifas</text>
+<circle cx="580" cy="408" r="7" fill="#151515"/>
+<text x="589" y="399" class="m e" font-size="13.5" font-weight="500" fill="#151515">Catalogo/Folios.cs</text>
+<circle cx="825" cy="408" r="6" fill="#151515"/>
+<text x="834" y="399" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.C…</text>
+<circle cx="1070" cy="396" r="3.6" fill="#151515"/>
+<text x="1080" y="400.5" class="m e" font-size="13.5" fill="#151515">class Folios</text>
+<circle cx="1070" cy="420" r="3.6" fill="#151515"/>
+<text x="1080" y="424.5" class="m e" font-size="13.5" fill="#151515">class Generador<tspan fill="#6E685E" font-size="11">  C# 11</tspan></text>
+<circle cx="580" cy="552" r="7" fill="#151515"/>
+<text x="589" y="543" class="m e" font-size="13.5" font-weight="500" fill="#151515">Catalogo/Tipos.cs</text>
+<circle cx="825" cy="552" r="6" fill="#151515"/>
+<text x="834" y="543" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.C…</text>
+<circle cx="1070" cy="444" r="3.6" fill="#151515"/>
+<text x="1080" y="448.5" class="m e" font-size="13.5" fill="#151515">enum Categoria</text>
+<circle cx="1070" cy="468" r="3.6" fill="#151515"/>
+<text x="1080" y="472.5" class="m e" font-size="13.5" fill="#151515">delegate Descuento</text>
+<circle cx="1070" cy="492" r="3.6" fill="#151515"/>
+<text x="1080" y="496.5" class="m e" font-size="13.5" fill="#151515">interface IIdentificable&lt;TSelf&gt;</text>
+<circle cx="1070" cy="516" r="3.6" fill="#151515"/>
+<text x="1080" y="520.5" class="m e" font-size="13.5" fill="#151515">class Producto</text>
+<circle cx="1070" cy="540" r="3.6" fill="#151515"/>
+<text x="1080" y="544.5" class="m e" font-size="13.5" fill="#151515">struct Coordenada<tspan fill="#6E685E" font-size="11">  C# 12</tspan></text>
+<circle cx="1070" cy="564" r="3.6" fill="#151515"/>
+<text x="1080" y="568.5" class="m e" font-size="13.5" fill="#151515">struct Contador</text>
+<circle cx="1070" cy="588" r="3.6" fill="#151515"/>
+<text x="1080" y="592.5" class="m e" font-size="13.5" fill="#151515">class Envio</text>
+<circle cx="1070" cy="612" r="3.6" fill="#151515"/>
+<text x="1080" y="616.5" class="m e" font-size="13.5" fill="#151515">class EnvioTerrestre</text>
+<circle cx="1070" cy="636" r="3.6" fill="#151515"/>
+<text x="1080" y="640.5" class="m e" font-size="13.5" fill="#151515">class EnvioExpres</text>
+<circle cx="1070" cy="660" r="3.6" fill="#151515"/>
+<text x="1080" y="664.5" class="m e" font-size="13.5" fill="#151515">class Recibo</text>
+<circle cx="580" cy="744" r="7" fill="#151515"/>
+<text x="589" y="735" class="m e" font-size="13.5" font-weight="500" fill="#151515">Ensamblado.cs</text>
+<circle cx="825" cy="684" r="3.6" fill="#151515"/>
+<text x="835" y="688.5" class="m e" font-size="13.5" fill="#151515">global using Tienda.Dominio.Pedidos<tspan fill="#6E685E" font-size="11">  C# 10</tspan></text>
+<circle cx="825" cy="708" r="3.6" fill="#151515"/>
+<text x="835" y="712.5" class="m e" font-size="13.5" fill="#151515">global using System.Collections.Immutab…<tspan fill="#6E685E" font-size="11">  C# 10</tspan></text>
+<circle cx="825" cy="732" r="3.6" fill="#151515"/>
+<text x="835" y="736.5" class="m e" font-size="13.5" fill="#151515">using System.Reflection</text>
+<circle cx="825" cy="756" r="3.6" fill="#151515"/>
+<text x="835" y="760.5" class="m e" font-size="13.5" fill="#151515">using System.Runtime.CompilerServices</text>
+<circle cx="825" cy="780" r="3.6" fill="#151515"/>
+<text x="835" y="784.5" class="m e" font-size="13.5" fill="#151515">[assembly: AssemblyDescription]</text>
+<circle cx="825" cy="804" r="3.6" fill="#151515"/>
+<text x="835" y="808.5" class="m e" font-size="13.5" fill="#151515">[assembly: InternalsVisibleTo]</text>
+<circle cx="580" cy="840" r="7" fill="#151515"/>
+<text x="589" y="831" class="m e" font-size="13.5" font-weight="500" fill="#151515">Extensiones/PedidoExtensio…</text>
+<circle cx="825" cy="840" r="6" fill="#151515"/>
+<text x="834" y="831" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.E…</text>
+<circle cx="1070" cy="828" r="3.6" fill="#151515"/>
+<text x="1080" y="832.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Catalogo</text>
+<circle cx="1070" cy="852" r="3.6" fill="#151515"/>
+<text x="1080" y="856.5" class="m e" font-size="13.5" fill="#151515">class PedidoExtensiones</text>
+<circle cx="580" cy="888" r="7" fill="#151515"/>
+<text x="589" y="879" class="m e" font-size="13.5" font-weight="500" fill="#151515">Pedidos/Linea.cs</text>
+<circle cx="825" cy="888" r="6" fill="#151515"/>
+<text x="834" y="879" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.P…</text>
+<circle cx="1070" cy="876" r="3.6" fill="#151515"/>
+<text x="1080" y="880.5" class="m e" font-size="13.5" fill="#151515">record Linea<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="1070" cy="900" r="3.6" fill="#151515"/>
+<text x="1080" y="904.5" class="m e" font-size="13.5" fill="#151515">record struct Dinero<tspan fill="#6E685E" font-size="11">  C# 10</tspan></text>
+<circle cx="580" cy="924" r="7" fill="#151515"/>
+<text x="589" y="915" class="m e" font-size="13.5" font-weight="500" fill="#151515">Pedidos/Pedido.Partes.cs</text>
+<circle cx="825" cy="924" r="6" fill="#151515"/>
+<text x="834" y="915" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.P…</text>
+<circle cx="1070" cy="924" r="3.6" fill="#151515"/>
+<text x="1080" y="928.5" class="m e" font-size="13.5" fill="#151515">class Pedido</text>
+<circle cx="580" cy="948" r="7" fill="#151515"/>
+<text x="589" y="939" class="m e" font-size="13.5" font-weight="500" fill="#151515">Pedidos/Pedido.cs</text>
+<circle cx="825" cy="948" r="6" fill="#151515"/>
+<text x="834" y="939" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.P…</text>
+<circle cx="1070" cy="948" r="5" fill="#151515"/>
+<text x="1079" y="939" class="m e" font-size="13.5" font-weight="500" fill="#151515">class Pedido</text>
+<circle cx="1315" cy="948" r="3.6" fill="#151515"/>
+<text x="1325" y="952.5" class="m e" font-size="13.5" fill="#151515">enum Fase</text>
+<circle cx="580" cy="1002" r="7" fill="#151515"/>
+<text x="589" y="993" class="m e" font-size="13.5" font-weight="500" fill="#151515">Sentencias/Caja.cs</text>
+<circle cx="825" cy="1002" r="6" fill="#151515"/>
+<text x="834" y="993" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Tienda.Dominio.S…</text>
+<circle cx="1070" cy="972" r="3.6" fill="#151515"/>
+<text x="1080" y="976.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Catalogo</text>
+<circle cx="1070" cy="996" r="3.6" fill="#151515"/>
+<text x="1080" y="1000.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Extensiones</text>
+<circle cx="1070" cy="1032" r="5" fill="#151515"/>
+<text x="1079" y="1023" class="m e" font-size="13.5" font-weight="500" fill="#151515">class Caja</text>
+<circle cx="1315" cy="1020" r="3.6" fill="#151515"/>
+<text x="1325" y="1024.5" class="m e" font-size="13.5" fill="#151515">delegate Lector</text>
+<circle cx="1315" cy="1044" r="3.6" fill="#151515"/>
+<text x="1325" y="1048.5" class="m e" font-size="13.5" fill="#151515">class Registro<tspan fill="#6E685E" font-size="11">  C# 12</tspan></text>
+<circle cx="335" cy="1578" r="8" fill="#151515"/>
+<text x="344" y="1569" class="m e" font-size="13.5" font-weight="500" fill="#151515">Arbol.App.csproj</text>
+<circle cx="580" cy="1116" r="7" fill="#151515"/>
+<text x="589" y="1107" class="m e" font-size="13.5" font-weight="500" fill="#151515">Comandos.cs</text>
+<circle cx="825" cy="1068" r="3.6" fill="#151515"/>
+<text x="835" y="1072.5" class="m e" font-size="13.5" fill="#151515">using System.Text</text>
+<circle cx="825" cy="1092" r="3.6" fill="#151515"/>
+<text x="835" y="1096.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Dibujo</text>
+<circle cx="825" cy="1116" r="3.6" fill="#151515"/>
+<text x="835" y="1120.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Raices</text>
+<circle cx="825" cy="1140" r="3.6" fill="#151515"/>
+<text x="835" y="1144.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Verificacion</text>
+<circle cx="825" cy="1164" r="6" fill="#151515"/>
+<text x="834" y="1155" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App</text>
+<circle cx="1070" cy="1164" r="3.6" fill="#151515"/>
+<text x="1080" y="1168.5" class="m e" font-size="13.5" fill="#151515">class Comandos</text>
+<circle cx="580" cy="1236" r="7" fill="#151515"/>
+<text x="589" y="1227" class="m e" font-size="13.5" font-weight="500" fill="#151515">Dibujo/Herbario.cs</text>
+<circle cx="825" cy="1188" r="3.6" fill="#151515"/>
+<text x="835" y="1192.5" class="m e" font-size="13.5" fill="#151515">using System.Globalization</text>
+<circle cx="825" cy="1212" r="3.6" fill="#151515"/>
+<text x="835" y="1216.5" class="m e" font-size="13.5" fill="#151515">using System.Net</text>
+<circle cx="825" cy="1236" r="3.6" fill="#151515"/>
+<text x="835" y="1240.5" class="m e" font-size="13.5" fill="#151515">using System.Text</text>
+<circle cx="825" cy="1260" r="3.6" fill="#151515"/>
+<text x="835" y="1264.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Raices</text>
+<circle cx="825" cy="1284" r="6" fill="#151515"/>
+<text x="834" y="1275" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Dibujo</text>
+<circle cx="1070" cy="1284" r="3.6" fill="#151515"/>
+<text x="1080" y="1288.5" class="m e" font-size="13.5" fill="#151515">class Herbario</text>
+<circle cx="580" cy="1332" r="7" fill="#151515"/>
+<text x="589" y="1323" class="m e" font-size="13.5" font-weight="500" fill="#151515">Dibujo/Terminal.cs</text>
+<circle cx="825" cy="1308" r="3.6" fill="#151515"/>
+<text x="835" y="1312.5" class="m e" font-size="13.5" fill="#151515">using System.Text</text>
+<circle cx="825" cy="1332" r="3.6" fill="#151515"/>
+<text x="835" y="1336.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Raices</text>
+<circle cx="825" cy="1356" r="6" fill="#151515"/>
+<text x="834" y="1347" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Dibujo</text>
+<circle cx="1070" cy="1356" r="3.6" fill="#151515"/>
+<text x="1080" y="1360.5" class="m e" font-size="13.5" fill="#151515">class Terminal<tspan fill="#6E685E" font-size="11">  C# 12</tspan></text>
+<circle cx="580" cy="1428" r="7" fill="#151515"/>
+<text x="589" y="1419" class="m e" font-size="13.5" font-weight="500" fill="#151515">Program.cs</text>
+<circle cx="825" cy="1380" r="3.6" fill="#151515"/>
+<text x="835" y="1384.5" class="m e" font-size="13.5" fill="#151515">using System.Text</text>
+<circle cx="825" cy="1404" r="3.6" fill="#151515"/>
+<text x="835" y="1408.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App</text>
+<circle cx="825" cy="1428" r="3.6" fill="#151515"/>
+<text x="835" y="1432.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Dibujo</text>
+<circle cx="825" cy="1452" r="3.6" fill="#151515"/>
+<text x="835" y="1456.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Raices</text>
+<circle cx="825" cy="1476" r="3.6" fill="#151515"/>
+<text x="835" y="1480.5" class="m e" font-size="13.5" fill="#151515">top-level statements<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="580" cy="1560" r="7" fill="#151515"/>
+<text x="589" y="1551" class="m e" font-size="13.5" font-weight="500" fill="#151515">Raices/LectorDeArbol.cs</text>
+<circle cx="825" cy="1500" r="3.6" fill="#151515"/>
+<text x="835" y="1504.5" class="m e" font-size="13.5" fill="#151515">using System.Diagnostics</text>
+<circle cx="825" cy="1524" r="3.6" fill="#151515"/>
+<text x="835" y="1528.5" class="m e" font-size="13.5" fill="#151515">using System.Xml.Linq</text>
+<circle cx="825" cy="1548" r="3.6" fill="#151515"/>
+<text x="835" y="1552.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis</text>
+<circle cx="825" cy="1572" r="3.6" fill="#151515"/>
+<text x="835" y="1576.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis.CSharp</text>
+<circle cx="825" cy="1596" r="3.6" fill="#151515"/>
+<text x="835" y="1600.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis.CSharp.Syn…</text>
+<circle cx="825" cy="1620" r="6" fill="#151515"/>
+<text x="834" y="1611" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Raices</text>
+<circle cx="1070" cy="1620" r="3.6" fill="#151515"/>
+<text x="1080" y="1624.5" class="m e" font-size="13.5" fill="#151515">class LectorDeArbol</text>
+<circle cx="580" cy="1656" r="7" fill="#151515"/>
+<text x="589" y="1647" class="m e" font-size="13.5" font-weight="500" fill="#151515">Raices/Nivel.cs</text>
+<circle cx="825" cy="1656" r="6" fill="#151515"/>
+<text x="834" y="1647" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Raices</text>
+<circle cx="1070" cy="1644" r="3.6" fill="#151515"/>
+<text x="1080" y="1648.5" class="m e" font-size="13.5" fill="#151515">enum Nivel</text>
+<circle cx="1070" cy="1668" r="3.6" fill="#151515"/>
+<text x="1080" y="1672.5" class="m e" font-size="13.5" fill="#151515">class NivelExtensiones</text>
+<circle cx="580" cy="1692" r="7" fill="#151515"/>
+<text x="589" y="1683" class="m e" font-size="13.5" font-weight="500" fill="#151515">Raices/Nodo.cs</text>
+<circle cx="825" cy="1692" r="6" fill="#151515"/>
+<text x="834" y="1683" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Raices</text>
+<circle cx="1070" cy="1692" r="3.6" fill="#151515"/>
+<text x="1080" y="1696.5" class="m e" font-size="13.5" fill="#151515">class Nodo<tspan fill="#6E685E" font-size="11">  C# 12</tspan></text>
+<circle cx="580" cy="1752" r="7" fill="#151515"/>
+<text x="589" y="1743" class="m e" font-size="13.5" font-weight="500" fill="#151515">Verificacion/Afirmaciones.…</text>
+<circle cx="825" cy="1716" r="3.6" fill="#151515"/>
+<text x="835" y="1720.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis</text>
+<circle cx="825" cy="1740" r="3.6" fill="#151515"/>
+<text x="835" y="1744.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis.CSharp</text>
+<circle cx="825" cy="1788" r="6" fill="#151515"/>
+<text x="834" y="1779" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Verifi…</text>
+<circle cx="1070" cy="1764" r="3.6" fill="#151515"/>
+<text x="1080" y="1768.5" class="m e" font-size="13.5" fill="#151515">record Afirmacion<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="1070" cy="1788" r="3.6" fill="#151515"/>
+<text x="1080" y="1792.5" class="m e" font-size="13.5" fill="#151515">record Veredicto<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="1070" cy="1812" r="3.6" fill="#151515"/>
+<text x="1080" y="1816.5" class="m e" font-size="13.5" fill="#151515">class Afirmaciones</text>
+<circle cx="580" cy="1872" r="7" fill="#151515"/>
+<text x="589" y="1863" class="m e" font-size="13.5" font-weight="500" fill="#151515">Verificacion/Compilador.cs</text>
+<circle cx="825" cy="1836" r="3.6" fill="#151515"/>
+<text x="835" y="1840.5" class="m e" font-size="13.5" fill="#151515">using System.Collections.Immutable</text>
+<circle cx="825" cy="1860" r="3.6" fill="#151515"/>
+<text x="835" y="1864.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis</text>
+<circle cx="825" cy="1884" r="3.6" fill="#151515"/>
+<text x="835" y="1888.5" class="m e" font-size="13.5" fill="#151515">using Microsoft.CodeAnalysis.CSharp</text>
+<circle cx="825" cy="1908" r="6" fill="#151515"/>
+<text x="834" y="1899" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Verifi…</text>
+<circle cx="1070" cy="1908" r="5" fill="#151515"/>
+<text x="1079" y="1899" class="m e" font-size="13.5" font-weight="500" fill="#151515">class Compilador</text>
+<circle cx="1315" cy="1908" r="3.6" fill="#151515"/>
+<text x="1325" y="1912.5" class="m e" font-size="13.5" fill="#151515">record Resultado<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="580" cy="1956" r="7" fill="#151515"/>
+<text x="589" y="1947" class="m e" font-size="13.5" font-weight="500" fill="#151515">Verificacion/Informe.cs</text>
+<circle cx="825" cy="1932" r="3.6" fill="#151515"/>
+<text x="835" y="1936.5" class="m e" font-size="13.5" fill="#151515">using System.Globalization</text>
+<circle cx="825" cy="1956" r="3.6" fill="#151515"/>
+<text x="835" y="1960.5" class="m e" font-size="13.5" fill="#151515">using System.Text</text>
+<circle cx="825" cy="1980" r="6" fill="#151515"/>
+<text x="834" y="1971" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Verifi…</text>
+<circle cx="1070" cy="1980" r="3.6" fill="#151515"/>
+<text x="1080" y="1984.5" class="m e" font-size="13.5" fill="#151515">class Informe</text>
+<circle cx="580" cy="2040" r="7" fill="#151515"/>
+<text x="589" y="2031" class="m e" font-size="13.5" font-weight="500" fill="#151515">Verificacion/Matriz.cs</text>
+<circle cx="825" cy="2040" r="6" fill="#151515"/>
+<text x="834" y="2031" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.App.Verifi…</text>
+<circle cx="1070" cy="2004" r="3.6" fill="#151515"/>
+<text x="1080" y="2008.5" class="m e" font-size="13.5" fill="#151515">enum Celda</text>
+<circle cx="1070" cy="2028" r="3.6" fill="#151515"/>
+<text x="1080" y="2032.5" class="m e" font-size="13.5" fill="#151515">record FilaMatriz<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="1070" cy="2052" r="3.6" fill="#151515"/>
+<text x="1080" y="2056.5" class="m e" font-size="13.5" fill="#151515">record ResultadoCelda<tspan fill="#6E685E" font-size="11">  C# 9</tspan></text>
+<circle cx="1070" cy="2076" r="3.6" fill="#151515"/>
+<text x="1080" y="2080.5" class="m e" font-size="13.5" fill="#151515">class Matriz</text>
+<circle cx="335" cy="2196" r="8" fill="#151515"/>
+<text x="344" y="2187" class="m e" font-size="13.5" font-weight="500" fill="#151515">Arbol.Pruebas.csproj</text>
+<circle cx="580" cy="2112" r="7" fill="#151515"/>
+<text x="589" y="2103" class="m e" font-size="13.5" font-weight="500" fill="#151515">AfirmacionesTests.cs</text>
+<circle cx="825" cy="2100" r="3.6" fill="#151515"/>
+<text x="835" y="2104.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Verificacion</text>
+<circle cx="825" cy="2124" r="6" fill="#151515"/>
+<text x="834" y="2115" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.Pruebas</text>
+<circle cx="1070" cy="2124" r="3.6" fill="#151515"/>
+<text x="1080" y="2128.5" class="m e" font-size="13.5" fill="#151515">class AfirmacionesTests</text>
+<circle cx="580" cy="2196" r="7" fill="#151515"/>
+<text x="589" y="2187" class="m e" font-size="13.5" font-weight="500" fill="#151515">DominioTests.cs</text>
+<circle cx="825" cy="2148" r="3.6" fill="#151515"/>
+<text x="835" y="2152.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Catalogo</text>
+<circle cx="825" cy="2172" r="3.6" fill="#151515"/>
+<text x="835" y="2176.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Extensiones</text>
+<circle cx="825" cy="2196" r="3.6" fill="#151515"/>
+<text x="835" y="2200.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Pedidos</text>
+<circle cx="825" cy="2220" r="3.6" fill="#151515"/>
+<text x="835" y="2224.5" class="m e" font-size="13.5" fill="#151515">using Tienda.Dominio.Sentencias</text>
+<circle cx="825" cy="2244" r="6" fill="#151515"/>
+<text x="834" y="2235" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.Pruebas</text>
+<circle cx="1070" cy="2244" r="3.6" fill="#151515"/>
+<text x="1080" y="2248.5" class="m e" font-size="13.5" fill="#151515">class DominioTests</text>
+<circle cx="580" cy="2280" r="7" fill="#151515"/>
+<text x="589" y="2271" class="m e" font-size="13.5" font-weight="500" fill="#151515">LectorTests.cs</text>
+<circle cx="825" cy="2268" r="3.6" fill="#151515"/>
+<text x="835" y="2272.5" class="m e" font-size="13.5" fill="#151515">using Arbol.App.Raices</text>
+<circle cx="825" cy="2292" r="6" fill="#151515"/>
+<text x="834" y="2283" class="m e" font-size="13.5" font-weight="500" fill="#151515">namespace Arbol.Pruebas</text>
+<circle cx="1070" cy="2292" r="3.6" fill="#151515"/>
+<text x="1080" y="2296.5" class="m e" font-size="13.5" fill="#151515">class LectorTests</text>
+<line x1="90" y1="2376" x2="1645" y2="2376" stroke="#D3CBBB" stroke-width="1.4" stroke-dasharray="2 8"/>
+<circle cx="96" cy="2416" r="6" fill="#151515"/><text x="110" y="2421" class="m" font-size="15" fill="#151515">contiene a → (a la derecha)</text>
+<circle cx="386" cy="2416" r="6" fill="#E0312B"/><text x="400" y="2421" class="m" font-size="15" fill="#151515">brote de C# 14</text>
+<text x="570" y="2421" class="m" font-size="15" fill="#6E685E">misma columna = mismo nivel</text>
+<text x="90" y="2478" class="m" font-size="24" font-weight="500" fill="#151515">cristian<tspan fill="#1F9D55">_</tspan></text>
+<text x="90" y="2502" class="m" font-size="13" fill="#6E685E" letter-spacing="4">ARTE · CÓDIGO · IA</text>
+<text x="1645" y="2486" class="m" font-size="18" fill="#151515" text-anchor="end"><tspan fill="#E0312B">›</tspan> while (vivo) crecer();</text>
+</svg>

@@ -1,6 +1,6 @@
 # 証 Verificación de «El árbol de C#»
 
-Compilador: Roslyn 5.0.0.0 · C# 14 · .NET 10.0.15
+Compilador: Roslyn 5.0.0.0 · C# 14 · .NET 10.0.14
 
 **124 de 124** afirmaciones confirmadas compilando código real.
 

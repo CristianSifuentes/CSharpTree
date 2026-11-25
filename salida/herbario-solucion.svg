@@ -171,7 +171,7 @@
 <path d="M580,2280 C702.5,2280 702.5,2292 825,2292" fill="none" stroke="#151515" stroke-width="1.8"/>
 <path d="M825,2292 C947.5,2292 947.5,2292 1070,2292" fill="none" stroke="#151515" stroke-width="1.4"/>
 <circle cx="90" cy="1435.5" r="9" fill="#E0312B"/>
-<text x="99" y="1426.5" class="m e" font-size="13.5" font-weight="500" fill="#E0312B">ArbolCSharp.slnx</text>
+<text x="99" y="1426.5" class="m e" font-size="13.5" font-weight="500" fill="#E0312B">CSharpTree.slnx</text>
 <circle cx="335" cy="675" r="8" fill="#151515"/>
 <text x="344" y="666" class="m e" font-size="13.5" font-weight="500" fill="#151515">Tienda.Dominio.csproj</text>
 <circle cx="580" cy="348" r="7" fill="#151515"/>

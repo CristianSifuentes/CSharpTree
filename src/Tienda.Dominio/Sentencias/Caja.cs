@@ -105,6 +105,34 @@ public sealed class Caja
         }
     }
 
+    // 葉 break y continue con etiqueta (C# 15) + argumentos en colecciones con with(...) (C# 15).
+    public static List<(int Fila, int Columna)> PrimerosPares(int[][] tablero, int maximo)
+    {
+        List<(int, int)> pares = [with(capacity: maximo)];               // 種 with(...) va al constructor
+        filas:
+        for (var f = 0; f < tablero.Length; f++)
+        {
+            for (var c = 0; c < tablero[f].Length; c++)
+            {
+                if (tablero[f][c] < 0)
+                {
+                    continue filas;                                      // 花 salta a la siguiente fila
+                }
+
+                if (tablero[f][c] % 2 == 0)
+                {
+                    pares.Add((f, c));
+                    if (pares.Count == maximo)
+                    {
+                        break filas;                                     // 花 sale de los dos bucles
+                    }
+                }
+            }
+        }
+
+        return pares;
+    }
+
     // 葉 patrones de lista (C# 11) en una expresión switch.
     public static string Forma(int[] cantidades) => cantidades switch
     {

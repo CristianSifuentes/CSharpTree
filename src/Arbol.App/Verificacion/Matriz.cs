@@ -26,27 +26,27 @@ public sealed record ResultadoCelda(string Miembro, string Contenedor, Celda Esp
 /// </summary>
 public static class Matriz
 {
-    public static IReadOnlyList<string> Contenedores { get; } = ["class", "struct", "interface", "enum", "static class"];
+    public static IReadOnlyList<string> Contenedores { get; } = ["class", "struct", "interface", "enum", "static class", "union"];
 
     private static readonly Celda S = Celda.Si;
     private static readonly Celda N = Celda.No;
     private static readonly Celda C = Celda.SoloStatic;
 
-    //                                                                                         class struct interface enum static class
+    //                                                                                         class struct interface enum static union
     public static IReadOnlyList<FilaMatriz> Filas { get; } =
     [
-        new("campo de instancia", "int x;", null, [S, S, N, N, N]),
-        new("campo static", "static int x;", null, [S, S, S, N, S]),
-        new("constante", "const int X = 1;", null, [S, S, S, S, S]),
-        new("propiedad", "int P { get; set; }", "static int P { get; set; }", [S, S, S, N, C]),
-        new("indexador", "int this[int i] { get { return 0; } }", "static int this[int i] { get { return 0; } }", [S, S, S, N, N]),
-        new("método", "void M() { }", "static void M() { }", [S, S, S, N, C]),
-        new("constructor", "public T() { }", "static T() { }", [S, S, C, N, C]),
-        new("finalizador", "~T() { }", null, [S, N, N, N, N]),
-        new("evento", "event System.Action E;", "static event System.Action E;", [S, S, S, N, C]),
-        new("operador", "public static T operator +(T a, T b) => a;", null, [S, S, S, N, N]),
-        new("tipo anidado", "class Anidado { }", null, [S, S, S, N, S]),
-        new("bloque extension", "extension(int x) { public bool Par => x % 2 == 0; }", null, [N, N, N, N, S]),
+        new("campo de instancia", "int x;", null, [S, S, N, N, N, N]),
+        new("campo static", "static int x;", null, [S, S, S, N, S, S]),
+        new("constante", "const int X = 1;", null, [S, S, S, S, S, S]),
+        new("propiedad", "int P { get; set; }", "static int P { get; set; }", [S, S, S, N, C, C]),
+        new("indexador", "int this[int i] { get { return 0; } }", "static int this[int i] { get { return 0; } }", [S, S, S, N, N, S]),
+        new("método", "void M() { }", "static void M() { }", [S, S, S, N, C, S]),
+        new("constructor", "public T() { }", "static T() { }", [S, S, C, N, C, C]),
+        new("finalizador", "~T() { }", null, [S, N, N, N, N, N]),
+        new("evento", "event System.Action E;", "static event System.Action E;", [S, S, S, N, C, C]),
+        new("operador", "public static T operator +(T a, T b) => a;", null, [S, S, S, N, N, S]),
+        new("tipo anidado", "class Anidado { }", null, [S, S, S, N, S, S]),
+        new("bloque extension", "extension(int x) { public bool Par => x % 2 == 0; }", null, [N, N, N, N, S, N]),
     ];
 
     public static IEnumerable<ResultadoCelda> Verificar()
@@ -83,7 +83,9 @@ public static class Matriz
     private static Compilador.Resultado Compilar(string contenedor, string miembro)
     {
         // El tipo se llama T para que constructores y operadores puedan nombrarlo.
-        var codigo = $"{contenedor} T {{ {miembro} }}";
+        var codigo = contenedor == "union"
+            ? $"record A; record B; union T(A, B) {{ {miembro} }}"
+            : $"{contenedor} T {{ {miembro} }}";
         return Compilador.Compilar([codigo]);
     }
 

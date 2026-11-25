@@ -13,7 +13,7 @@ namespace Arbol.App.Raices;
 public static class LectorDeArbol
 {
     public static CSharpParseOptions Opciones { get; } =
-        CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.CSharp14);
+        CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.CSharp15);
 
     /// <summary>Hasta qué profundidad se siguen las expresiones anidadas (a + b * f(c) es un árbol infinito en potencia).</summary>
     public static int MaxProfundidadExpresion { get; set; } = 2;
@@ -170,6 +170,8 @@ public static class LectorDeArbol
                 {
                     Novedad = t switch
                     {
+                        UnionDeclarationSyntax => "C# 15",
+                        _ when t.Modifiers.Any(SyntaxKind.ClosedKeyword) => "C# 15",
                         _ when t.Modifiers.Any(SyntaxKind.FileKeyword) => "C# 11",
                         { ParameterList: not null } and (ClassDeclarationSyntax or StructDeclarationSyntax) => "C# 12",
                         RecordDeclarationSyntax r when r.ClassOrStructKeyword.IsKind(SyntaxKind.StructKeyword) => "C# 10",
@@ -446,6 +448,7 @@ public static class LectorDeArbol
         AssignmentExpressionSyntax { Left: ConditionalAccessExpressionSyntax } => "C# 14",
         InvocationExpressionSyntax { Expression: IdentifierNameSyntax { Identifier.Text: "nameof" } } inv
             when inv.DescendantNodes().OfType<OmittedTypeArgumentSyntax>().Any() => "C# 14",
+        CollectionExpressionSyntax c when c.Elements.Any(el => el is WithElementSyntax) => "C# 15",
         ParenthesizedLambdaExpressionSyntax l
             when l.ParameterList.Parameters.Any(p => p.Type is null && p.Modifiers.Count > 0) => "C# 14",
         CollectionExpressionSyntax => "C# 12",

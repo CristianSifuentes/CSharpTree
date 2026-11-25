@@ -65,7 +65,7 @@ public sealed class Terminal(TextWriter salida, bool color)
         }
     }
 
-    private string Marca(Nodo nodo) => C(nodo.Nivel.EsExtremo || nodo.Novedad == "C# 14" ? Rojo : Negrita, nodo.Nivel.Kanji);
+    private string Marca(Nodo nodo) => C(nodo.Nivel.EsExtremo || nodo.Novedad == "C# 15" ? Rojo : Negrita, nodo.Nivel.Kanji);
 
     private string Etiqueta(Nodo nodo)
     {
@@ -77,7 +77,7 @@ public sealed class Terminal(TextWriter salida, bool color)
 
         if (nodo.Novedad is { } novedad)
         {
-            texto.Append(' ').Append(C(novedad == "C# 14" ? Rojo : Gris, $"[{novedad}]"));
+            texto.Append(' ').Append(C(novedad == "C# 15" ? Rojo : Gris, $"[{novedad}]"));
         }
 
         return texto.ToString();

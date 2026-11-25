@@ -1,8 +1,8 @@
 <Project>
   <!-- 根 Reglas comunes a todo el árbol: cada proyecto de la solución las hereda. -->
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <LangVersion>14</LangVersion>
+    <!-- .NET 11: C# 15 es la versión por defecto del lenguaje. -->
+    <TargetFramework>net11.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

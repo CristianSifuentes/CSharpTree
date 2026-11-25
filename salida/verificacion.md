@@ -1,8 +1,8 @@
 # 証 Verificación de «El árbol de C#»
 
-Compilador: Roslyn 5.0.0.0 · C# 14 · .NET 10.0.14
+Compilador: Roslyn 5.12.0.0 · C# 14 · .NET 11.0.0
 
-**124 de 124** afirmaciones confirmadas compilando código real.
+**151 de 151** afirmaciones confirmadas compilando código real.
 
 ## Cada cosa en su rama · reglas de ubicación
 
@@ -93,24 +93,44 @@ Compilador: Roslyn 5.0.0.0 · C# 14 · .NET 10.0.14
 | ✓ | N14g | 種 C# 14 · asignación con ?. | `class C { public int X; static void M(C? c) => c?.X = 1; }` | compila · antes: CS9260 |
 | ✓ | N14h | 種 C# 14 · nameof(List<>) | `class C { string N = nameof(System.Collections.Generic.List<>); }` | compila · antes: CS9260 |
 
+## Brotes de C# 15 · .NET 11
+
+| | id | afirmación | código | el compilador dice |
+|---|---|---|---|---|
+| ✓ | N15a | 芽 C# 15 · union: un tipo nuevo | `record Gato; record Perro; union Mascota(Gato, Perro);` | compila · antes: CS8803 CS1001 CS8805 CS8112 CS0246 |
+| ✓ | N15b | 芽 C# 15 · switch exhaustivo sobre una union | `record Gato; record Perro; union Mascota(Gato, Perro); class U { static string M(Mascota m) => m switch { Gato => "miau", Perro => "guau" }; static Mascota N() => new Gato(); }` | compila · antes: CS8803 CS1001 CS0246 CS8805 CS8112 |
+| ✓ | N15c | 系 C# 15 · closed: jerarquía cerrada | `closed record Estado; sealed record Abierto : Estado; sealed record Cerrado : Estado;` | compila · antes: CS9327 |
+| ✓ | N15d | 葉 C# 15 · indexadores en bloques extension | `using System.Linq; static class E { extension(System.Collections.Generic.IEnumerable<int> s) { public int this[int i] => s.ElementAt(i); } }` | compila · antes: CS9327 |
+| ✓ | N15e | 花 C# 15 · break y continue con etiqueta | `class C { void M() { fuera: for (var i = 0; i < 3; i++) { for (var j = 0; j < 3; j++) { if (j == 1) continue fuera; if (i == 2) break fuera; } } } }` | compila · antes: CS9327 |
+| ✓ | N15f | 種 C# 15 · argumentos en colecciones: with(...) | `using System.Collections.Generic; class C { List<int> L = [with(capacity: 10), 1, 2]; }` | compila · antes: CS9327 |
+| ✓ | U15a | 芽 Una union tampoco va dentro de un método | `record Gato; record Perro; class C { void M() { union X(Gato, Perro); } }` | CS1001 CS8112 CS0246 |
+| ✓ | U15b | 芽 Una union sí puede anidarse en otro tipo | `record Gato; record Perro; class C { public union X(Gato, Perro); }` | compila |
+| ✓ | U15c | 芽 Una union admite métodos en su cuerpo | `record Gato; record Perro; union X(Gato, Perro) { public bool EsGato => Value is Gato; }` | compila |
+| ✓ | U15d | 系 Nadie hereda de una union (es un struct) | `record Gato; record Perro; union X(Gato, Perro); class H : X { }` | CS0509 |
+| ✓ | C15a | 系 closed no se combina con sealed: CS9381 | `closed sealed class A { }` | CS9381 |
+| ✓ | C15b | 系 closed no se combina con abstract: CS9384 | `closed abstract class A { }` | CS9384 |
+| ✓ | C15c | 系 Una clase closed no se instancia (es abstract): CS0144 | `closed class A { } class U { object M() => new A(); }` | CS0144 |
+| ✓ | C15d | 系 closed: heredar desde otro ensamblado no compila | `sealed class Mia : Lejana.Base { }` | CS9382 |
+| ✓ | C15e | 系 closed: desde el mismo ensamblado sí | `closed class Base { } sealed class Hija : Base { }` | compila |
+
 ## 表 Matriz miembro × tipo
 
 ● compila · ○ solo en su forma static · — no compila
 
-| miembro | class | struct | interface | enum | static class |
-|---|---|---|---|---|---|
-| campo de instancia | ● | ● | — | — | — |
-| campo static | ● | ● | ● | — | ● |
-| constante | ● | ● | ● | ● | ● |
-| propiedad | ● | ● | ● | — | ○ |
-| indexador | ● | ● | ● | — | — |
-| método | ● | ● | ● | — | ○ |
-| constructor | ● | ● | ○ | — | ○ |
-| finalizador | ● | — | — | — | — |
-| evento | ● | ● | ● | — | ○ |
-| operador | ● | ● | ● | — | — |
-| tipo anidado | ● | ● | ● | — | ● |
-| bloque extension | — | — | — | — | ● |
+| miembro | class | struct | interface | enum | static class | union |
+|---|---|---|---|---|---|---|
+| campo de instancia | ● | ● | — | — | — | — |
+| campo static | ● | ● | ● | — | ● | ● |
+| constante | ● | ● | ● | ● | ● | ● |
+| propiedad | ● | ● | ● | — | ○ | ○ |
+| indexador | ● | ● | ● | — | — | ● |
+| método | ● | ● | ● | — | ○ | ● |
+| constructor | ● | ● | ○ | — | ○ | ○ |
+| finalizador | ● | — | — | — | — | — |
+| evento | ● | ● | ● | — | ○ | ○ |
+| operador | ● | ● | ● | — | — | ● |
+| tipo anidado | ● | ● | ● | — | ● | ● |
+| bloque extension | — | — | — | — | ● | — |
 
 <details><summary>Detalle de cada celda</summary>
 
@@ -119,60 +139,72 @@ Compilador: Roslyn 5.0.0.0 · C# 14 · .NET 10.0.14
 - campo de instancia en interface: CS0525
 - campo de instancia en enum: CS1041 CS1003
 - campo de instancia en static class: CS0708
+- campo de instancia en union: CS9373
 - campo static en class: compila
 - campo static en struct: compila
 - campo static en interface: compila
 - campo static en enum: CS1513 CS8803 CS0106 CS1022 CS8805
 - campo static en static class: compila
+- campo static en union: compila
 - constante en class: compila
 - constante en struct: compila
 - constante en interface: compila
 - constante en enum: compila
 - constante en static class: compila
+- constante en union: compila
 - propiedad en class: compila
 - propiedad en struct: compila
 - propiedad en interface: compila
 - propiedad en enum: CS1041 CS1003 CS1022
 - propiedad en static class: natural: CS0708 · static: compila
+- propiedad en union: natural: CS9373 · static: compila
 - indexador en class: compila
 - indexador en struct: compila
 - indexador en interface: compila
 - indexador en enum: CS1041 CS1001 CS1003 CS1022 CS0246
 - indexador en static class: CS0720
+- indexador en union: compila
 - método en class: compila
 - método en struct: compila
 - método en interface: compila
 - método en enum: CS1041 CS1003 CS1022
 - método en static class: natural: CS0708 · static: compila
+- método en union: compila
 - constructor en class: compila
 - constructor en struct: compila
 - constructor en interface: natural: CS0526 · static: compila
 - constructor en enum: CS1513 CS8803 CS0106 CS1001 CS1022 CS8805 CS0161
 - constructor en static class: natural: CS0710 · static: compila
+- constructor en union: natural: CS9375 · static: compila
 - finalizador en class: compila
 - finalizador en struct: CS0575
 - finalizador en interface: CS0575
 - finalizador en enum: CS1001 CS1003 CS1022
 - finalizador en static class: CS0711
+- finalizador en union: CS0575
 - evento en class: compila
 - evento en struct: compila
 - evento en interface: compila
 - evento en enum: CS1041 CS1003
 - evento en static class: natural: CS0708 · static: compila
+- evento en union: natural: CS9373 · static: compila
 - operador en class: compila
 - operador en struct: compila
 - operador en interface: compila
 - operador en enum: CS1513 CS1022 CS0563
 - operador en static class: CS0715 CS0721 CS0722
+- operador en union: compila
 - tipo anidado en class: compila
 - tipo anidado en struct: compila
 - tipo anidado en interface: compila
 - tipo anidado en enum: CS1513 CS1022
 - tipo anidado en static class: compila
+- tipo anidado en union: compila
 - bloque extension en class: CS9283
 - bloque extension en struct: CS9283
 - bloque extension en interface: CS9283
 - bloque extension en enum: CS1003 CS1513 CS1022 CS0103
 - bloque extension en static class: compila
+- bloque extension en union: CS9283
 
 </details>

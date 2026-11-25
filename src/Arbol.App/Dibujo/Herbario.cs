@@ -60,7 +60,7 @@ public static class Herbario
 
         // 2. Cabecera: kanji, título y una columna por nivel.
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen)}" y="70" class="m" font-size="20" fill="{Gris}" letter-spacing="1.5">cristian / herbario</text>""");
-        svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(ancho - Margen)}" y="70" class="m" font-size="20" fill="{Gris}" text-anchor="end">[ c# 14 ]</text>""");
+        svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(ancho - Margen)}" y="70" class="m" font-size="20" fill="{Gris}" text-anchor="end">[ c# 15 ]</text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen)}" y="170" class="k" font-size="92" fill="{Tinta}">樹<tspan fill="{Rojo}">形</tspan></text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen + 215)}" y="140" class="i" font-size="52" fill="{Tinta}">{X(titulo)}</text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen + 217)}" y="172" class="m" font-size="16" fill="{Gris}">leído con Roslyn · {hojas} hojas · {podado.Descendientes().Count() + 1} nodos · lo general a la izquierda</text>""");
@@ -89,7 +89,7 @@ public static class Herbario
         {
             var (x, y) = posiciones[nodo];
             var esHoja = nodo.Hijos.Count == 0;
-            var rojo = nodo.Nivel.EsExtremo || nodo.Novedad == "C# 14";
+            var rojo = nodo.Nivel.EsExtremo || nodo.Novedad == "C# 15";
             var radio = esHoja ? 3.6 : Math.Max(4.5, 9 - columnas[nodo]);
             svg.AppendLine(CultureInfo.InvariantCulture, $"""<circle cx="{F(x)}" cy="{F(y)}" r="{F(radio)}" fill="{(rojo ? Rojo : Tinta)}"/>""");
 
@@ -99,7 +99,7 @@ public static class Herbario
             var color = rojo ? Rojo : Tinta;
             if (esHoja)
             {
-                var nota = nodo.Novedad is { } n ? $"""<tspan fill="{(n == "C# 14" ? Rojo : Gris)}" font-size="11">  {n}</tspan>""" : "";
+                var nota = nodo.Novedad is { } n ? $"""<tspan fill="{(n == "C# 15" ? Rojo : Gris)}" font-size="11">  {n}</tspan>""" : "";
                 svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(x + 10)}" y="{F(y + 4.5)}" class="m e" font-size="13.5" fill="{color}">{etiqueta}{nota}</text>""");
             }
             else
@@ -112,7 +112,7 @@ public static class Herbario
         var pie = alto - 120;
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<line x1="{F(Margen)}" y1="{F(pie - 40)}" x2="{F(ancho - Margen)}" y2="{F(pie - 40)}" stroke="{Puntos}" stroke-width="1.4" stroke-dasharray="2 8"/>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<circle cx="{F(Margen + 6)}" cy="{F(pie)}" r="6" fill="{Tinta}"/><text x="{F(Margen + 20)}" y="{F(pie + 5)}" class="m" font-size="15" fill="{Tinta}">contiene a → (a la derecha)</text>""");
-        svg.AppendLine(CultureInfo.InvariantCulture, $"""<circle cx="{F(Margen + 296)}" cy="{F(pie)}" r="6" fill="{Rojo}"/><text x="{F(Margen + 310)}" y="{F(pie + 5)}" class="m" font-size="15" fill="{Tinta}">brote de C# 14</text>""");
+        svg.AppendLine(CultureInfo.InvariantCulture, $"""<circle cx="{F(Margen + 296)}" cy="{F(pie)}" r="6" fill="{Rojo}"/><text x="{F(Margen + 310)}" y="{F(pie + 5)}" class="m" font-size="15" fill="{Tinta}">brote de C# 15</text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen + 480)}" y="{F(pie + 5)}" class="m" font-size="15" fill="{Gris}">misma columna = mismo nivel</text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen)}" y="{F(pie + 62)}" class="m" font-size="24" font-weight="500" fill="{Tinta}">cristian<tspan fill="#1F9D55">_</tspan></text>""");
         svg.AppendLine(CultureInfo.InvariantCulture, $"""<text x="{F(Margen)}" y="{F(pie + 86)}" class="m" font-size="13" fill="{Gris}" letter-spacing="4">ARTE · CÓDIGO · IA</text>""");

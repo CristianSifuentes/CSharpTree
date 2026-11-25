@@ -1,6 +1,6 @@
 
    樹形   el árbol de C#
-   de la solución a la expresión · leído con Roslyn · C# 14 · .NET 10
+   de la solución a la expresión · leído con Roslyn 5.12 · C# 15
    ──────────────────────────────────────────────●
 
 
@@ -8,16 +8,16 @@
 
   根  solución   raíz         1  •
   幹  proyecto   tronco       3  •
-  枝  archivo    rama        23  •
-  茎  namespace  tallo       66  •
-  芽  tipo       brote       44  •
-  葉  miembro    hoja       239  ••••
-  花  sentencia  flor       553  ••••••••
-  種  expresión  semilla   2988  ••••••••••••••••••••••••••••••••••••••••
+  枝  archivo    rama        25  •
+  茎  namespace  tallo       73  •
+  芽  tipo       brote       54  •
+  葉  miembro    hoja       260  ••••
+  花  sentencia  flor       598  ••••••••
+  種  expresión  semilla   3309  ••••••••••••••••••••••••••••••••••••••••
 
-  芽  El árbol de ArbolCSharp.slnx, hasta tipo (brote)
+  芽  El árbol de CSharpTree.slnx, hasta tipo (brote)
 
-  根 ArbolCSharp.slnx  solo agrupa: el compilador nunca la ve
+  根 CSharpTree.slnx  solo agrupa: el compilador nunca la ve
   ├─ 幹 Tienda.Dominio.csproj  → Tienda.Dominio.dll
   │  ├─ 枝 Catalogo/Bloques.cs
   │  │  ├─ 茎 namespace Tienda.Dominio.Inventario  de bloque { }
@@ -58,6 +58,17 @@
   │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
   │  │     ├─ 芽 record Linea  public sealed [C# 9]
   │  │     └─ 芽 record struct Dinero  public readonly [C# 10]
+  │  ├─ 枝 Pedidos/Pago.cs
+  │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
+  │  │     ├─ 芽 record Aprobado  public sealed [C# 9]
+  │  │     ├─ 芽 record Rechazado  public sealed [C# 9]
+  │  │     ├─ 芽 record Pendiente  public sealed [C# 9]
+  │  │     ├─ 芽 union ResultadoPago  public [C# 15]
+  │  │     ├─ 芽 record EstadoEnvio  public closed [C# 15]
+  │  │     ├─ 芽 record Preparando  public sealed [C# 9]
+  │  │     ├─ 芽 record EnCamino  public sealed [C# 9]
+  │  │     ├─ 芽 record Entregado  public sealed [C# 9]
+  │  │     └─ 芽 class Envios  public static
   │  ├─ 枝 Pedidos/Pedido.Partes.cs
   │  │  └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
   │  │     └─ 芽 class Pedido  public sealed partial
@@ -143,6 +154,14 @@
      │  ├─ 茎 using Arbol.App.Verificacion
      │  └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
      │     └─ 芽 class AfirmacionesTests  public sealed
+     ├─ 枝 CSharp15Tests.cs
+     │  ├─ 茎 using Arbol.App.Raices
+     │  ├─ 茎 using Tienda.Dominio.Catalogo
+     │  ├─ 茎 using Tienda.Dominio.Extensiones
+     │  ├─ 茎 using Tienda.Dominio.Pedidos
+     │  ├─ 茎 using Tienda.Dominio.Sentencias
+     │  └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
+     │     └─ 芽 class CSharp15Tests  public sealed
      ├─ 枝 DominioTests.cs
      │  ├─ 茎 using Tienda.Dominio.Catalogo
      │  ├─ 茎 using Tienda.Dominio.Extensiones
@@ -155,9 +174,9 @@
         └─ 茎 namespace Arbol.Pruebas  file-scoped [C# 10]
            └─ 芽 class LectorTests  public sealed
 
-  種  El árbol de ArbolCSharp.slnx, hasta expresión (semilla)
+  種  El árbol de CSharpTree.slnx, hasta expresión (semilla)
 
-  根 ArbolCSharp.slnx  solo agrupa: el compilador nunca la ve
+  根 CSharpTree.slnx  solo agrupa: el compilador nunca la ve
   └─ 幹 Tienda.Dominio.csproj  → Tienda.Dominio.dll
      └─ 枝 Pedidos/Pedido.Partes.cs
         └─ 茎 namespace Tienda.Dominio.Pedidos  file-scoped [C# 10]
@@ -181,7 +200,7 @@
 
   道  ¿Dónde vive «método Agregar()»? · 葉 miembro
 
-  根 ArbolCSharp.slnx
+  根 CSharpTree.slnx
     幹 Tienda.Dominio.csproj
       枝 Pedidos/Pedido.cs
         茎 namespace Tienda.Dominio.Pedidos
@@ -197,15 +216,15 @@
 
   道  ¿Dónde vive «extension(Pedido pedido)»? · 葉 miembro
 
-  根 ArbolCSharp.slnx
+  根 CSharpTree.slnx
     幹 Tienda.Dominio.csproj
       枝 Extensiones/PedidoExtensiones.cs
         茎 namespace Tienda.Dominio.Extensiones
           芽 class PedidoExtensiones
             葉 extension(Pedido pedido)
 
-  mismo nivel (2 hermanos dentro de «class PedidoExtensiones»):
-    葉 extension(Pedido) · método Resumen()
+  mismo nivel (3 hermanos dentro de «class PedidoExtensiones»):
+    葉 extension(Pedido pedido) · extension(Pedido) · método Resumen()
 
   証  Cada cosa en su rama · reglas de ubicación
 
@@ -286,30 +305,48 @@
   ✓ N14g  種 C# 14 · asignación con ?.                                compila · antes: CS9260
   ✓ N14h  種 C# 14 · nameof(List<>)                                   compila · antes: CS9260
 
+  証  Brotes de C# 15 · .NET 11
+
+  ✓ N15a  芽 C# 15 · union: un tipo nuevo                             compila · antes: CS8803 CS1001 CS8805 CS811…
+  ✓ N15b  芽 C# 15 · switch exhaustivo sobre una union                compila · antes: CS8803 CS1001 CS0246 CS880…
+  ✓ N15c  系 C# 15 · closed: jerarquía cerrada                        compila · antes: CS9327
+  ✓ N15d  葉 C# 15 · indexadores en bloques extension                 compila · antes: CS9327
+  ✓ N15e  花 C# 15 · break y continue con etiqueta                    compila · antes: CS9327
+  ✓ N15f  種 C# 15 · argumentos en colecciones: with(...)             compila · antes: CS9327
+  ✓ U15a  芽 Una union tampoco va dentro de un método                 CS1001 CS8112 CS0246
+  ✓ U15b  芽 Una union sí puede anidarse en otro tipo                 compila
+  ✓ U15c  芽 Una union admite métodos en su cuerpo                    compila
+  ✓ U15d  系 Nadie hereda de una union (es un struct)                 CS0509
+  ✓ C15a  系 closed no se combina con sealed: CS9381                  CS9381
+  ✓ C15b  系 closed no se combina con abstract: CS9384                CS9384
+  ✓ C15c  系 Una clase closed no se instancia (es abstract): CS0144   CS0144
+  ✓ C15d  系 closed: heredar desde otro ensamblado no compila         CS9382
+  ✓ C15e  系 closed: desde el mismo ensamblado sí                     compila
+
   表  ¿Qué hoja crece en qué brote? · la matriz, compilada celda por celda
 
-                      class         struct        interface     enum          static class  
-  campo de instancia  ●             ●             —             —             —             
-  campo static        ●             ●             ●             —             ●             
-  constante           ●             ●             ●             ●             ●             
-  propiedad           ●             ●             ●             —             ○             
-  indexador           ●             ●             ●             —             —             
-  método              ●             ●             ●             —             ○             
-  constructor         ●             ●             ○             —             ○             
-  finalizador         ●             —             —             —             —             
-  evento              ●             ●             ●             —             ○             
-  operador            ●             ●             ●             —             —             
-  tipo anidado        ●             ●             ●             —             ●             
-  bloque extension    —             —             —             —             ●             
+                      class         struct        interface     enum          static class  union         
+  campo de instancia  ●             ●             —             —             —             —             
+  campo static        ●             ●             ●             —             ●             ●             
+  constante           ●             ●             ●             ●             ●             ●             
+  propiedad           ●             ●             ●             —             ○             ○             
+  indexador           ●             ●             ●             —             —             ●             
+  método              ●             ●             ●             —             ○             ●             
+  constructor         ●             ●             ○             —             ○             ○             
+  finalizador         ●             —             —             —             —             —             
+  evento              ●             ●             ●             —             ○             ○             
+  operador            ●             ●             ●             —             —             ●             
+  tipo anidado        ●             ●             ●             —             ●             ●             
+  bloque extension    —             —             —             —             ●             —             
 
-  ● 124 de 124 afirmaciones confirmadas por el compilador.
+  ● 151 de 151 afirmaciones confirmadas por el compilador.
   informe: salida/verificacion.md
 
   画  Lámina de herbario generada desde el código real
 
-  salida/herbario-dominio.svg  (147 nodos hasta miembro)
+  salida/herbario-dominio.svg  (171 nodos hasta miembro)
 
   画  Lámina de herbario generada desde el código real
 
-  salida/herbario-solucion.svg  (137 nodos hasta tipo)
+  salida/herbario-solucion.svg  (156 nodos hasta tipo)
 

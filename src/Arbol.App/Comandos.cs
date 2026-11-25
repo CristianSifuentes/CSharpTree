@@ -94,7 +94,7 @@ internal static class Comandos
 
     public static int Todo(Terminal t, string slnx, string carpetaSalida)
     {
-        t.Portada("de la solución a la expresión · leído con Roslyn · C# 14 · .NET 10");
+        t.Portada("de la solución a la expresión · leído con Roslyn 5.12 · C# 15");
         Censo(t, slnx);
         Arbol(t, slnx, Nivel.Tipo, null);
         Arbol(t, slnx, Nivel.Expresion, "Tienda.Dominio/Pedidos/Pedido.Partes.cs");

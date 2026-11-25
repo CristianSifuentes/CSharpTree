@@ -16,7 +16,8 @@ public sealed record Afirmacion(
     bool DebeCompilar,
     string? Diagnostico = null,
     OutputKind Salida = OutputKind.DynamicallyLinkedLibrary,
-    LanguageVersion? Desde = null)
+    LanguageVersion? Desde = null,
+    string? Biblioteca = null)
 {
     public Afirmacion(string id, string kanji, string texto, string codigo, bool debeCompilar, string? diagnostico = null)
         : this(id, kanji, texto, [codigo], debeCompilar, diagnostico)
@@ -25,7 +26,8 @@ public sealed record Afirmacion(
 
     public Veredicto Comprobar()
     {
-        var resultado = Compilador.Compilar(Fuentes, Salida);
+        var extra = Biblioteca is null ? null : new[] { Compilador.Biblioteca(Biblioteca) };
+        var resultado = Compilador.Compilar(Fuentes, Salida, extra: extra);
         var cumple = DebeCompilar
             ? resultado.Compila
             : !resultado.Compila && (Diagnostico is null || resultado.Tiene(Diagnostico));
@@ -34,7 +36,7 @@ public sealed record Afirmacion(
         string? antes = null;
         if (Desde is { } version && cumple)
         {
-            var anterior = Compilador.Compilar(Fuentes, Salida, (LanguageVersion)((int)version - 100));
+            var anterior = Compilador.Compilar(Fuentes, Salida, (LanguageVersion)((int)version - 100), extra);
             antes = anterior.Compila ? "también compila antes" : $"antes: {anterior.Codigos}";
             cumple = !anterior.Compila;
         }
@@ -157,6 +159,36 @@ public static class Afirmaciones
             "class C { string N = nameof(System.Collections.Generic.List<>); }"),
     ];
 
+    private const string Mascotas = "record Gato; record Perro; ";
+
+    /// <summary>C# 15 (.NET 11): lo nuevo y las reglas que trae, compilado con Roslyn 5.12.</summary>
+    public static IReadOnlyList<Afirmacion> CSharp15 { get; } =
+    [
+        Nueva("N15a", "芽", "C# 15 · union: un tipo nuevo", LanguageVersion.CSharp15,
+            Mascotas + "union Mascota(Gato, Perro);"),
+        Nueva("N15b", "芽", "C# 15 · switch exhaustivo sobre una union", LanguageVersion.CSharp15,
+            Mascotas + "union Mascota(Gato, Perro); class U { static string M(Mascota m) => m switch { Gato => \"miau\", Perro => \"guau\" }; static Mascota N() => new Gato(); }"),
+        Nueva("N15c", "系", "C# 15 · closed: jerarquía cerrada", LanguageVersion.CSharp15,
+            "closed record Estado; sealed record Abierto : Estado; sealed record Cerrado : Estado;"),
+        Nueva("N15d", "葉", "C# 15 · indexadores en bloques extension", LanguageVersion.CSharp15,
+            "using System.Linq; static class E { extension(System.Collections.Generic.IEnumerable<int> s) { public int this[int i] => s.ElementAt(i); } }"),
+        Nueva("N15e", "花", "C# 15 · break y continue con etiqueta", LanguageVersion.CSharp15,
+            "class C { void M() { fuera: for (var i = 0; i < 3; i++) { for (var j = 0; j < 3; j++) { if (j == 1) continue fuera; if (i == 2) break fuera; } } } }"),
+        Nueva("N15f", "種", "C# 15 · argumentos en colecciones: with(...)", LanguageVersion.CSharp15,
+            "using System.Collections.Generic; class C { List<int> L = [with(capacity: 10), 1, 2]; }"),
+        new("U15a", "芽", "Una union tampoco va dentro de un método", [Mascotas + "class C { void M() { union X(Gato, Perro); } }"], false),
+        new("U15b", "芽", "Una union sí puede anidarse en otro tipo", [Mascotas + "class C { public union X(Gato, Perro); }"], true),
+        new("U15c", "芽", "Una union admite métodos en su cuerpo", [Mascotas + "union X(Gato, Perro) { public bool EsGato => Value is Gato; }"], true),
+        new("U15d", "系", "Nadie hereda de una union (es un struct)", [Mascotas + "union X(Gato, Perro); class H : X { }"], false),
+        new("C15a", "系", "closed no se combina con sealed: CS9381", ["closed sealed class A { }"], false, "CS9381"),
+        new("C15b", "系", "closed no se combina con abstract: CS9384", ["closed abstract class A { }"], false, "CS9384"),
+        new("C15c", "系", "Una clase closed no se instancia (es abstract): CS0144", ["closed class A { } class U { object M() => new A(); }"], false, "CS0144"),
+        new("C15d", "系", "closed: heredar desde otro ensamblado no compila",
+            ["sealed class Mia : Lejana.Base { }"], false, null, OutputKind.DynamicallyLinkedLibrary, null,
+            "namespace Lejana { public closed class Base { } public sealed class Propia : Base { } }"),
+        new("C15e", "系", "closed: desde el mismo ensamblado sí", ["closed class Base { } sealed class Hija : Base { }"], true),
+    ];
+
     public static IEnumerable<(string Titulo, IReadOnlyList<Afirmacion> Lista)> Grupos =>
     [
         ("Cada cosa en su rama · reglas de ubicación", Ubicacion),
@@ -164,6 +196,7 @@ public static class Afirmaciones
         ("Una sola savia · herencia", Herencia),
         ("Miembros, sentencias y expresiones", Miembros),
         ("Brotes nuevos · compila con su versión y falla con la anterior", Novedades),
+        ("Brotes de C# 15 · .NET 11", CSharp15),
     ];
 
     public static IEnumerable<Afirmacion> Todas => Grupos.SelectMany(g => g.Lista);

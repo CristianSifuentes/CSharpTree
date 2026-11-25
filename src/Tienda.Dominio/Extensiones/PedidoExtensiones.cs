@@ -16,6 +16,26 @@ public static class PedidoExtensiones
         public Pedido Con(Producto producto, int cantidad = 1) => pedido.Agregar(producto.ComoLinea(cantidad));
     }
 
+    // 葉 indexador de extensión (C# 15): pedido["CAFE-01"] busca una línea por su SKU.
+    extension(Pedido pedido)
+    {
+        public Linea? this[string sku]
+        {
+            get
+            {
+                for (var i = 0; i < pedido.Cantidad; i++)
+                {
+                    if (pedido[i].Sku == sku)
+                    {
+                        return pedido[i];
+                    }
+                }
+
+                return null;
+            }
+        }
+    }
+
     // 葉 bloque extension static (C# 14): se llama como Pedido.Para("Ana").
     extension(Pedido)
     {
